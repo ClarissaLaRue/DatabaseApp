@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>Database.DataAccess.Repositories</RootNamespace>
     </PropertyGroup>
 
 </Project>
