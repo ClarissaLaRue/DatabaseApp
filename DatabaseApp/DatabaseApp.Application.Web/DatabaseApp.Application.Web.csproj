@@ -5,5 +5,10 @@
         <RootNamespace>Database.Application.Web</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="6.4.4" />
+      <PackageReference Include="Ninject" Version="3.3.4" />
+    </ItemGroup>
+
 
 </Project>

@@ -5,4 +5,8 @@
         <RootNamespace>Database.Common</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Ninject" Version="3.3.4" />
+    </ItemGroup>
+
 </Project>
