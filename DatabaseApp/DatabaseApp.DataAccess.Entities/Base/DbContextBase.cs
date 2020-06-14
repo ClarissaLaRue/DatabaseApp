@@ -10,6 +10,9 @@ using Database.Common.Helper;
 using Database.Common.Providers;
 using Database.DataAccess.Entities.Helper;
 using Database.DataAccess.Entities.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using DbContext = System.Data.Entity.DbContext;
+using EntityState = System.Data.Entity.EntityState;
 
 namespace Database.DataAccess.Entities.Base
 {
@@ -24,7 +27,7 @@ namespace Database.DataAccess.Entities.Base
         {
 
         }
-
+        
         #endregion //Constructors
         
         public bool IsDisposed { get; private set; }
@@ -47,7 +50,7 @@ namespace Database.DataAccess.Entities.Base
 
             foreach (var propertyInfo in this.GetType().GetProperties())
             {
-                if (!propertyInfo.PropertyType.IsGenericType || propertyInfo.PropertyType.GetGenericTypeDefinition() != typeof(DbSet<>)) continue;
+                if (!propertyInfo.PropertyType.IsGenericType || propertyInfo.PropertyType.GetGenericTypeDefinition() != typeof(System.Data.Entity.DbSet<>)) continue;
                 var entityType = propertyInfo.PropertyType.GetGenericArguments()[0];
 
                 var entityMethod = entityGenericMethod.MakeGenericMethod(entityType);
