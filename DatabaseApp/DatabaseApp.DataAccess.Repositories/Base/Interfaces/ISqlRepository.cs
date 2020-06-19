@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Database.DataAccess.Repositories.Base
+namespace Database.DataAccess.Repositories.Base.Interfaces
 {
     public interface ISqlRepository<T> : IRepository<T>
     {

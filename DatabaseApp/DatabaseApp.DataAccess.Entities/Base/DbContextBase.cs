@@ -10,7 +10,6 @@ using Database.Common.Helper;
 using Database.Common.Providers;
 using Database.DataAccess.Entities.Helper;
 using Database.DataAccess.Entities.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using DbContext = System.Data.Entity.DbContext;
 using EntityState = System.Data.Entity.EntityState;
 

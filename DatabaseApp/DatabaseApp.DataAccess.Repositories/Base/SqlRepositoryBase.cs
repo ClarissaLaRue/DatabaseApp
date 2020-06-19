@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using Database.Common.Helper;
 using Database.DataAccess.Entities.Base;
 using Database.DataAccess.Entities.Interfaces;
+using Database.DataAccess.Repositories.Base.Interfaces;
+using Database.DataAccess.Repositories.Helper;
 using Ninject;
 
 namespace Database.DataAccess.Repositories.Base
@@ -15,7 +19,6 @@ namespace Database.DataAccess.Repositories.Base
         #region Fields
 
         private DbContextBase _context;
-        private readonly Expression<Func<T, bool>> _isNotInactiveExpression;
         private readonly Expression<Func<T, int>> _sortBySequenceExpression;
 
         #endregion
@@ -48,16 +51,6 @@ namespace Database.DataAccess.Repositories.Base
         [Inject]
         public SqlRepositoryBase()
         {
-            if (typeof(IInactivatable).IsAssignableFrom(typeof(T)))
-            {
-                var xParam = Expression.Parameter(typeof(T), "x");
-                _isNotInactiveExpression = (Expression<Func<T, bool>>)Expression.Lambda(
-                    typeof(Func<T, bool>),
-                    Expression.Not(Expression.MakeMemberAccess(xParam, typeof(T).GetProperty("IsInactive"))),
-                    xParam);
-                //_IsInactiveExpression
-            }
-
             if (typeof(ISorted).IsAssignableFrom(typeof(T)))
             {
                 var xParam = Expression.Parameter(typeof(T), "x");
@@ -148,24 +141,14 @@ namespace Database.DataAccess.Repositories.Base
             items.ToList().ForEach(x => dbSet.Remove(x));
         }
 
-        public virtual void Deactivate(T item)
+        public void Deactivate(T item)
         {
-            if (!(item is IInactivatable))
-            {
-                throw new InvalidOperationException(string.Format("{0} doesn't implement interface {1}", typeof(T).FullName, typeof(IInactivatable).FullName));
-            }
-            ((IInactivatable)item).IsInactive = true;
-            Save(item);
+            throw new NotImplementedException();
         }
 
-        public virtual void Deactivate(IQueryable<T> items)
+        public void Deactivate(IQueryable<T> items)
         {
-            if (!typeof(IInactivatable).IsAssignableFrom(typeof(T)))
-            {
-                throw new InvalidOperationException(string.Format("{0} doesn't implement interface {1}", typeof(T).FullName, typeof(IInactivatable).FullName));
-            }
-            items.OfType<IInactivatable>().ToList().ForEach(x => x.IsInactive = true);
-            this.Context.SaveChanges();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -223,10 +206,6 @@ namespace Database.DataAccess.Repositories.Base
         public virtual IQueryable<T> Items()
         {
             IQueryable<T> query = GetDbSet();
-            if (typeof(IInactivatable).IsAssignableFrom(typeof(T)))
-            {
-                query = query.Where(_isNotInactiveExpression);
-            }
 
             if (typeof(ISorted).IsAssignableFrom(typeof(T)))
             {
@@ -238,18 +217,8 @@ namespace Database.DataAccess.Repositories.Base
 
         public virtual IQueryable<T> Items(bool includeInactive)
         {
-            if (!typeof(IInactivatable).IsAssignableFrom(typeof(T)))
-            {
-                throw new InvalidOperationException(string.Format("{0} doesn't implement interface {1}", typeof(T).FullName, typeof(IInactivatable).FullName));
-            }
 
             IQueryable<T> query = GetDbSet();
-
-            if (!includeInactive)
-            {
-                query = query.Where(_isNotInactiveExpression);
-            }
-
             if (typeof(ISorted).IsAssignableFrom(typeof(T)))
             {
                 query = query.OrderBy(_sortBySequenceExpression);

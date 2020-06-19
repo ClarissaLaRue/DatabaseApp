@@ -6,6 +6,7 @@ using Database.DataAccess.Entities;
 using Database.DataAccess.Entities.Base;
 using Database.DataAccess.Entities.Building;
 using Database.DataAccess.Repositories.Base;
+using Database.DataAccess.Repositories.Base.Interfaces;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
 using Ninject.Web.Common;

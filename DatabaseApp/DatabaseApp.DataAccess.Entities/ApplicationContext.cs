@@ -1,3 +1,4 @@
+using System.Data.Entity;
 using Database.DataAccess.Entities.Base;
 using Database.DataAccess.Entities.Building;
 using Database.DataAccess.Entities.Competitions;
@@ -6,7 +7,6 @@ using Database.DataAccess.Entities.Relations;
 using Database.DataAccess.Entities.Sports;
 using Database.DataAccess.Entities.SportsMans;
 using Database.DataAccess.Entities.Trainers;
-using Microsoft.EntityFrameworkCore;
 
 namespace Database.DataAccess.Entities
 {
