@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Database.DataAccess.Repositories.Base
+namespace Database.DataAccess.Repositories.Base.Interfaces
 {
     public interface IRepository<T> : IRepository, IQueryable<T>
     {
