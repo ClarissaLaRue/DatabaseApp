@@ -13,4 +13,10 @@
       <PackageReference Include="Ninject" Version="3.2.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\DatabaseApp.DataAccess.Entities\DatabaseApp.DataAccess.Entities.csproj" />
+      <ProjectReference Include="..\DatabaseApp.DataAccess.Repositories\DatabaseApp.DataAccess.Repositories.csproj" />
+      <ProjectReference Include="..\DatabaseApp.Models\DatabaseApp.Models.csproj" />
+    </ItemGroup>
+
 </Project>
