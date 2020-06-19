@@ -25,5 +25,12 @@
       <ProjectReference Include="..\DatabaseApp.DataAccess.Repositories\DatabaseApp.DataAccess.Repositories.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Update="Pages\Dashboard.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
 
 </Project>
