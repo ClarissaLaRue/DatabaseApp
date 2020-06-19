@@ -1,4 +1,5 @@
 ﻿using System;
+using SportManager.Common.Interfaces;
 
 namespace SportManager.DataAccess.Entities.Interfaces
 {

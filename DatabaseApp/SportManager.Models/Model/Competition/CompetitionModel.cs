@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using SportManager.DataAccess.Entities.Building;
+using SportManager.DataAccess.Entities.Competitions.Members;
 using SportManager.Models.Base;
 using SportManager.Models.Model.Sport;
 

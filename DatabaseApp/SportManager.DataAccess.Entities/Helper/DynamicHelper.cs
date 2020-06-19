@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using SportManager.Common.Helper;
 
 namespace SportManager.DataAccess.Entities.Helper
 {

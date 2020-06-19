@@ -1,4 +1,5 @@
-﻿using SportManager.DataAccess.Entities.Base;
+﻿using System.ComponentModel.DataAnnotations;
+using SportManager.DataAccess.Entities.Base;
 using SportManager.DataAccess.Entities.Sports;
 
 namespace SportManager.DataAccess.Entities.SportsMans

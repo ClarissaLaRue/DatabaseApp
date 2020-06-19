@@ -1,4 +1,5 @@
-﻿using SportManager.DataAccess.Entities.Interfaces;
+﻿using System.ComponentModel.DataAnnotations;
+using SportManager.DataAccess.Entities.Interfaces;
 
 namespace SportManager.DataAccess.Entities.Base
 {

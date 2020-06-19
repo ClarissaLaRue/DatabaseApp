@@ -34,12 +34,12 @@
     </PropertyGroup>
     <ItemGroup>
       <Compile Include="ApplicationContext.cs" />
-      <Compile Include="App_Start\NinjectWebCommon.cs" />
       <Compile Include="Base\AuditableEntityBase.cs" />
       <Compile Include="Base\DbContextBase.cs" />
       <Compile Include="Base\EfAttributeBase.cs" />
       <Compile Include="Base\EntityBase.cs" />
       <Compile Include="Base\ModelBase.cs" />
+      <Compile Include="Base\NotNullAttribute.cs" />
       <Compile Include="Building\SportBuilding.cs" />
       <Compile Include="Competitions\Competition.cs" />
       <Compile Include="Competitions\Members\Member.cs" />
@@ -83,6 +83,7 @@
         <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
         <Private>True</Private>
       </Reference>
+      <Reference Include="System" />
       <Reference Include="System.ComponentModel.DataAnnotations" />
       <Reference Include="System.Web" />
       <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4">

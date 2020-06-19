@@ -1,4 +1,5 @@
 using System;
+using SportManager.DataAccess.Entities.Helper;
 using SportManager.Models.Interfaces;
 
 namespace SportManager.Models.Base

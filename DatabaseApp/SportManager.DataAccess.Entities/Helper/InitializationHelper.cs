@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.ComponentModel;
+using System.Reflection;
 using SportManager.DataAccess.Entities.Interfaces;
 
 namespace SportManager.DataAccess.Entities.Helper

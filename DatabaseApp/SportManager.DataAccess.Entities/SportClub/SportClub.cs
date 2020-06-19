@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Database.DataAccess.Entities.Trainers;
 using SportManager.DataAccess.Entities.Base;
 using SportManager.DataAccess.Entities.Sports;

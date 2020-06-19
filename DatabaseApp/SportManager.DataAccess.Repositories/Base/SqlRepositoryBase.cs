@@ -1,7 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Linq.Expressions;
+using Ninject;
+using SportManager.Common.Helper;
+using SportManager.DataAccess.Entities.Base;
+using SportManager.DataAccess.Entities.Interfaces;
 using SportManager.DataAccess.Repositories.Base.Interfaces;
 using SportManager.DataAccess.Repositories.Helper;
 
@@ -183,17 +190,9 @@ namespace SportManager.DataAccess.Repositories.Base
 
                 this.Context.SaveChanges();
             }
-            catch (System.Data.Entity.Validation.DbEntityValidationException e)
+            catch (Exception e)
             {
-                var outputLines = new List<string>();
-                foreach (var eve in e.EntityValidationErrors)
-                {
-                    outputLines.Add(string.Format(
-                        "{0}: Entity of type \"{1}\" in state \"{2}\" has the following validation errors:",
-                        DateTime.Now, eve.Entry.Entity.GetType().Name, eve.Entry.State));
-                    outputLines.AddRange(eve.ValidationErrors.Select(ve => string.Format("- Property: \"{0}\", Error: \"{1}\"", ve.PropertyName, ve.ErrorMessage)));
-                }
-                throw;
+                // ignored
             }
         }
 

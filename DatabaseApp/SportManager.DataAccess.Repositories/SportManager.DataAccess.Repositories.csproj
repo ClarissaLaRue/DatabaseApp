@@ -65,6 +65,16 @@
       <None Include="App.config" />
       <None Include="packages.config" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\SportManager.Common\SportManager.Common.csproj">
+        <Project>{86fce7a4-cd1b-4d38-97b6-3fbea2c1b0da}</Project>
+        <Name>SportManager.Common</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\SportManager.DataAccess.Entities\SportManager.DataAccess.Entities.csproj">
+        <Project>{c83d20c3-137b-4230-aee8-cf673f0fe13e}</Project>
+        <Name>SportManager.DataAccess.Entities</Name>
+      </ProjectReference>
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
       <PropertyGroup>
