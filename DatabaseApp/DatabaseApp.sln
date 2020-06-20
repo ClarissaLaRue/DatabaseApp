@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportManager.Common", "Spor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportManager.DataAccess.Entities", "SportManager.DataAccess.Entities\SportManager.DataAccess.Entities.csproj", "{C83D20C3-137B-4230-AEE8-CF673F0FE13E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportManager.DataAccess.Repositories", "SportManager.DataAccess.Repositories\SportManager.DataAccess.Repositories.csproj", "{15B922FF-3462-4EEC-AED0-4AA323BED2C0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportManager.Models", "SportManager.Models\SportManager.Models.csproj", "{53336472-4464-47AF-A697-9EB9CBD447E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportManager.Repositories", "SportManager.Repositories\SportManager.Repositories.csproj", "{01B6AB6F-D9F7-4673-89CD-7120F2C31CEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{C83D20C3-137B-4230-AEE8-CF673F0FE13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C83D20C3-137B-4230-AEE8-CF673F0FE13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C83D20C3-137B-4230-AEE8-CF673F0FE13E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15B922FF-3462-4EEC-AED0-4AA323BED2C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15B922FF-3462-4EEC-AED0-4AA323BED2C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15B922FF-3462-4EEC-AED0-4AA323BED2C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15B922FF-3462-4EEC-AED0-4AA323BED2C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{53336472-4464-47AF-A697-9EB9CBD447E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53336472-4464-47AF-A697-9EB9CBD447E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53336472-4464-47AF-A697-9EB9CBD447E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53336472-4464-47AF-A697-9EB9CBD447E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B6AB6F-D9F7-4673-89CD-7120F2C31CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B6AB6F-D9F7-4673-89CD-7120F2C31CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B6AB6F-D9F7-4673-89CD-7120F2C31CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B6AB6F-D9F7-4673-89CD-7120F2C31CEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

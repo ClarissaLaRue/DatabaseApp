@@ -2,7 +2,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Reflection;
 
-namespace SportManager.DataAccess.Repositories.Helper
+namespace SportManager.Repositories.Helper
 {
     public static class DbContextHelper
     {

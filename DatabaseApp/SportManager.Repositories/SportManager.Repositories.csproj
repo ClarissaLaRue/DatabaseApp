@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
     <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{15B922FF-3462-4EEC-AED0-4AA323BED2C0}</ProjectGuid>
+        <ProjectGuid>{01B6AB6F-D9F7-4673-89CD-7120F2C31CEF}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>SportManager.DataAccess.Repositories</RootNamespace>
-        <AssemblyName>SportManager.DataAccess.Repositories</AssemblyName>
+        <RootNamespace>SportManager.Repositories</RootNamespace>
+        <AssemblyName>SportManager.Repositories</AssemblyName>
         <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -33,33 +33,39 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-      <Compile Include="Base\Interfaces\IRepository.cs" />
-      <Compile Include="Base\Interfaces\IRepositoryG.cs" />
-      <Compile Include="Base\Interfaces\ISorted.cs" />
-      <Compile Include="Base\Interfaces\ISqlRepository.cs" />
-      <Compile Include="Base\Interfaces\ISqlRepositoryG.cs" />
-      <Compile Include="Base\SqlRepositoryBase.cs" />
-      <Compile Include="Helper\DbContextHelper.cs" />
-      <Compile Include="Helper\EntityFieldHelper.cs" />
+        <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+          <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Ninject, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7">
+          <HintPath>..\packages\Ninject.4.0.0-beta-0134\lib\net45\Ninject.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-      <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
-        <Private>True</Private>
-      </Reference>
-      <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-        <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-        <Private>True</Private>
-      </Reference>
-      <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-        <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-        <Private>True</Private>
-      </Reference>
-      <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7">
-        <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
-        <Private>True</Private>
-      </Reference>
-      <Reference Include="System.ComponentModel.DataAnnotations" />
+        <Compile Include="Base\Interfaces\IRepository.cs" />
+        <Compile Include="Base\Interfaces\IRepositoryG.cs" />
+        <Compile Include="Base\Interfaces\ISorted.cs" />
+        <Compile Include="Base\Interfaces\ISqlRepository.cs" />
+        <Compile Include="Base\Interfaces\ISqlRepositoryG.cs" />
+        <Compile Include="Base\SqlRepositoryBase.cs" />
+        <Compile Include="Class1.cs" />
+        <Compile Include="Helper\DbContextHelper.cs" />
+        <Compile Include="Helper\EntityFieldHelper.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
@@ -91,4 +97,5 @@
     <Target Name="AfterBuild">
     </Target>
     -->
+
 </Project>

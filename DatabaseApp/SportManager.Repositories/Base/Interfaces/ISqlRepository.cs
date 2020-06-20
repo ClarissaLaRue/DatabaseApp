@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace SportManager.DataAccess.Repositories.Base.Interfaces
+namespace SportManager.Repositories.Base.Interfaces
 {
     public interface ISqlRepository<T> : IRepository<T>
     {

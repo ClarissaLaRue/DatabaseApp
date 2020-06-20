@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace SportManager.DataAccess.Repositories.Base.Interfaces
+namespace SportManager.Repositories.Base.Interfaces
 {
     public interface IRepository
     {

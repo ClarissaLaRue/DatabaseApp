@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using System.Data.Entity.Validation;
 using System.Linq;
 using System.Linq.Expressions;
 using Ninject;
 using SportManager.Common.Helper;
 using SportManager.DataAccess.Entities.Base;
 using SportManager.DataAccess.Entities.Interfaces;
-using SportManager.DataAccess.Repositories.Base.Interfaces;
-using SportManager.DataAccess.Repositories.Helper;
+using SportManager.Repositories.Base.Interfaces;
+using SportManager.Repositories.Helper;
 
-namespace SportManager.DataAccess.Repositories.Base
+namespace SportManager.Repositories.Base
 {
     public class SqlRepositoryBase<T> : ISqlRepository<T>
         where T : class, IEntity

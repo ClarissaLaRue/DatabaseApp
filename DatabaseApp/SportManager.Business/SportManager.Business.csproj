@@ -80,6 +80,10 @@
       <Project>{53336472-4464-47af-a697-9eb9cbd447e3}</Project>
       <Name>SportManager.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SportManager.Repositories\SportManager.Repositories.csproj">
+      <Project>{01b6ab6f-d9f7-4673-89cd-7120f2c31cef}</Project>
+      <Name>SportManager.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

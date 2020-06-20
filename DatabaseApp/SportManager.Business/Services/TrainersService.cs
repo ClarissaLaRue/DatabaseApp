@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
 using Database.DataAccess.Entities.Trainers;
-using SportManager.DataAccess.Repositories.Base.Interfaces;
 using SportManager.Models.Model.Trainer;
 using SportManager.Models.ViewModel.Trainer;
+using SportManager.Repositories.Base.Interfaces;
 
 namespace SportManager.Business.Services
 {
